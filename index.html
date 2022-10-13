@@ -108,7 +108,10 @@ p{opacity:0;color:var(--warna-teks);font-size:18px;font-weight:700;line-height:1
    <p id="kalimat">...</p>
    <p id="gerak"><marquee id="marq" direction="left"></marquee></p>
    </blockquote></div>
-   
+
+   <div id="contTom"><a class='button' onClick="sjawab()"></i>Komen</a></div>
+   </div>
+   <div class="pyro" id="fire"><div class="before"></div><div class="after"></div></div>
 
 <script>const body = document.querySelector("body");function createHeart() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()}},100);</script>
 <script>
@@ -125,7 +128,7 @@ p{opacity:0;color:var(--warna-teks);font-size:18px;font-weight:700;line-height:1
   function start(){var marquee = document.getElementById ("marq");marquee.start();}
   function stop(){var marquee = document.getElementById ("marq");marquee.stop();}stop();
 
-  sudah=1;function showbawah(){sudah=2;otomatis();start();gerak.style = "display:inline-flex";kalimat.style="animation: rto 1s infinite alternate";fire.style.opacity = ".7";}
+  sudah=1;function showbawah(){sudah=2;otomatis();start();gerak.style = "display:inline-flex";kalimat.style="animation: rto 5s infinite alternate";fire.style.opacity = ".7";}
   function tfkata(){fkata+=1;}
   fkata=1;function gantikata(){
                  if(fkata==1){otomatis();kalimat.innerHTML = katasatu;}
@@ -136,14 +139,28 @@ p{opacity:0;color:var(--warna-teks);font-size:18px;font-weight:700;line-height:1
   }
 </script>
 <script type="text/javascript">
-
+       async function menuju(){await swals.fire('Buat Komen');window.location = "https://t.me/xraflydtya";}
+       async function jawab(){
+           var { value: jawaban } = await swals.fire({
+               title: 'Isi Pesan &#128073;&#128072;', input: 'text', allowOutsideClick: false, showCancelButton: false,
+           });
+           if(jawaban && jawaban.length < 19){
+           	window.jawaban = jawaban;
+               pesanwhatsapp = jawaban;
+               menuju();
+           } else {
+               await swals.fire('Ups!', 'Jawaban tidak boleh kosong atau lebih dari 18 karakter, ya!');jawab();
+           }
+       }
       async function pertama(){
          audio = new Audio('https://audio.jukehost.co.uk/SI0WpEbcPAyqlGFWAoBAA5VttzGMOTAZ');
          katasatu = "Buah Nangka Matang Di Pohon";
          katadua = "Disamping Pohon Pepaya";
          katatiga = "Bukan Aku Belum Move On";
          kataempat = "Gara-gara Liat Fotomu Kok Jadi Kangen Ya";
-         marqbawah = "wcksn";
+         marqbawah = "Halo Kamu";
+         katakhirb = "--Selesai--";
+
          await swalst.fire('Bentar');await swals.fire('Selamat datang!', 'Klik Tombol Dibawah Ini');setTimeout(showDiv,300);
        } pertama();
 </script>
