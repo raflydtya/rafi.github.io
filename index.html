@@ -124,7 +124,7 @@ p{opacity:0;color:var(--warna-teks);font-size:18px;font-weight:700;line-height:1
   function setel(){audio.play();} function setel2(){bgm.play();} 
   var aa=0,akhirkata;function aksiakhir() {if(aa<akhirkata.length){idpertama.innerHTML += akhirkata.charAt(aa);aa++;setTimeout(aksiakhir,85);}
   if(aa==akhirkata.length){idkedua.style = "opacity:1;transform: scale(1);font-size:16px;margin-top:20px";setTimeout(showpalingakhir,1400);}}
-  function showpalingakhir(){idketiga.style = "font-weight:700;opacity:1;font-size:16px;margin-top:20px;animation:rto .6s infinite alternate;";setTimeout(tombol,1000);}
+  function showpalingakhir(){idketiga.style = "font-weight:700;opacity:1;font-size:16px;margin-top:20px;animation:rto 6s infinite alternate;";setTimeout(tombol,1000);}
   function start(){var marquee = document.getElementById ("marq");marquee.start();}
   function stop(){var marquee = document.getElementById ("marq");marquee.stop();}stop();
 
@@ -149,7 +149,7 @@ p{opacity:0;color:var(--warna-teks);font-size:18px;font-weight:700;line-height:1
                pesanwhatsapp = jawaban;
                menuju();
            } else {
-               await swals.fire('Ups!', 'Jawaban tidak boleh kosong atau lebih dari 18 karakter, ya!');jawab();
+               await swals.fire('Eh!', 'Jangan Dikosongin');jawab();
            }
        }
       async function pertama(){
