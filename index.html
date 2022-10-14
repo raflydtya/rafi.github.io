@@ -109,7 +109,7 @@ p{opacity:0;color:var(--warna-teks);font-size:18px;font-weight:700;line-height:1
    <p id="gerak"><marquee id="marq" direction="left"></marquee></p>
    </blockquote></div>
 
-   <div id="contTom"><a class='button' onClick="sjawab()"></i>Komen</a></div>
+   <div id="contTom"><a class='button' onClick="sjawab()"></i>Ikuti</a></div>
    </div>
    <div class="pyro" id="fire"><div class="before"></div><div class="after"></div></div>
 
@@ -139,10 +139,10 @@ p{opacity:0;color:var(--warna-teks);font-size:18px;font-weight:700;line-height:1
   }
 </script>
 <script type="text/javascript">
-       async function menuju(){await swals.fire('Buat Komen');window.location = "https://instagram.com/raflydtya";}
+       async function menuju(){await swals.fire('Instagram');window.location = "https://instagram.com/raflydtya";}
        async function jawab(){
            var { value: jawaban } = await swals.fire({
-               title: 'Captcha: Isi Nama;', input: 'text', allowOutsideClick: false, showCancelButton: false,
+               title: 'Captcha: Isi Nama', input: 'text', allowOutsideClick: false, showCancelButton: false,
            });
            if(jawaban && jawaban.length < 19){
            	window.jawaban = jawaban;
