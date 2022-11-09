@@ -1,4 +1,4 @@
-<p align="center"><b>Flexibel Github Pages</b>
+<p align="center"><b>Website by Github Pages</b>
 
 ##
 
